@@ -52,13 +52,8 @@ class DoorCommand: Command {
         let response: ActionResponse
         switch action {
         case .open:
-            if (!open) {
-                pressButton()
-                response = .opening
-            }
-            else {
-                response = .open
-            }
+            pressButton()
+            response = .opening
         case .close:
             if (open) {
                 pressButton()
