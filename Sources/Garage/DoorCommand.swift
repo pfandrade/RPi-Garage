@@ -76,7 +76,7 @@ class DoorCommand: Command {
     private let buttonPin: GPIO
 
     init(sensorPin: GPIOName, buttonPin: GPIOName) throws {
-        let gpios = SwiftyGPIO.GPIOs(for: .RaspberryPiRev2)
+        let gpios = SwiftyGPIO.GPIOs(for: .RaspberryPiPlusZero)
         
         guard
             let sensorGPIO = gpios[sensorPin],
